@@ -1,0 +1,36 @@
+h1 {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#buttonLogin{
+  margin-left: 100px;
+}
+
+div.loginButton{
+  margin-left: 100px;
+}
+img{
+  float: left;
+  width:75px;
+  height: 75px;
+}
+
+#tableLogin{
+}
+
+.route table{
+  margin-top: 100px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+div.register{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.headerTable{
+  margin-left: auto;
+  margin-right: auto;
+}

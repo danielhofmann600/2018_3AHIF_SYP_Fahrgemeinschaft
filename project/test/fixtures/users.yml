@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userName: MyString
+  firstName: MyString
+  lastName: MyString
+  id: 
+  password: MyString
+  isDriver: false
+
+two:
+  userName: MyString
+  firstName: MyString
+  lastName: MyString
+  id: 
+  password: MyString
+  isDriver: false
