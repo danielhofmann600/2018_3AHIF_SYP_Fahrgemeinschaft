@@ -3,7 +3,7 @@ default: &default
   encoding: utf8
   database: mycarpool
   username: root
-  password:
+  password: 
   host: 127.0.0.1
   port: 3306
 development:

@@ -22,7 +22,27 @@
         <tr>
           <td>
             <div>
-              <a href="search_route.html" class="w3-button w3-block w3-black" role="button">Route suchen</a>
+              <a href="search_route.html" class="w3-button w3-block w3-black" role="button" onclick="getRoute()">Route suchen</a>
+              <a class="w3-button w3-block w3-black" role="button" onclick="script1">Roxte suchen</a>
+              <script id="script1">
+              var xhr = new XMLHttpRequest();
+              xhr.open('GET', 'localhost:3000', true);
+
+              // If specified, responseType must be empty string or "text"
+              xhr.responseType = 'text';
+
+              xhr.onload = function () {
+                  if (xhr.readyState === xhr.DONE) {
+                      if (xhr.status === 200) {
+                          console.log(xhr.response);
+                          console.log(xhr.responseText);
+                      }
+                  }
+              };
+
+              xhr.send();
+              </script>
+              <p id="demo"></p>
             </div>
           </td>
           <td>
