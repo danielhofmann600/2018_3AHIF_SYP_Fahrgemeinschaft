@@ -20,7 +20,7 @@
 
     <section>
       <div class="register">
-        <form class="registerInputs">
+        <form class="registerInputs" method="post" action="user.php">
             <p>Vorname: <input type="text" name="firstname"></p>
             <p>Nachname: <input type="text" name="lastname"></p>
             <p>E-mail: <input type="text" name="email"></p>
@@ -28,15 +28,9 @@
             <p>Password: <input type="password" name="password"></p>
             <p>Wiederholen: <input type="password" name="confirmpassowrd"></p>
             <br>
+            <input type="submit" class="w3-button w3-block w3-black" role="button" name="registerButton" value="Submit">
         </form>
-          <button type="button"class="w3-button w3-block w3-black" role="button" name="registerButton" onclick="myFunction();">Register</button>
-          <script>
-          function myFunction(){
-            
-            alert("Create Func");
-          };
-
-        </script>
+          <button type="button"class="w3-button w3-block w3-black" role="button" name="registerButton">Register</button>
       </div>
     </section>
   </body>
