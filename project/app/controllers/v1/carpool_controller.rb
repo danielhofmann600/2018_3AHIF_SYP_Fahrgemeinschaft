@@ -3,7 +3,6 @@ require 'json'
 module V1
   class CarpoolController < ApplicationController
 
-  after_action :cors_set_access_control_headers
 
   def cors_set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
@@ -30,29 +29,8 @@ module V1
 
     def create # POST
       routes = JSON.parse(request.body.read)
-      routes.each do |r|
-        @route = Route.new
-        @route.destination = r.destination
-        @route.departure = r.departure
-        @route.kilometers = r.kilometers
-        @route.route_params()
-      end
-    end
-
-    def route_params
-      params.require(:route).permit(:destination,:departure,:kilometers)
-    end
-
-    def edit
-
-    end
-
-    def update # PATCH
-
-    end
-
-    def destroy
-
+      Route.create!(routes)
+      render json: routes
     end
   end
 end
