@@ -1,10 +1,10 @@
 version: '3'
 
-services: 
+services:
   mariadb:
     image: mariadb:10.4.5
     container_name: mariadb
-    environment: 
+    environment:
       MYSQL_ROOT_PASSWORD: passme
       MYSQL_DATABASE: fahrgemeinschaft
       MYSQL_USER: user
@@ -13,7 +13,7 @@ services:
       - 3306:3306
     volumes:
       -  /db:/var/lib/mysql
-      
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
@@ -22,9 +22,9 @@ services:
       - 8000:80
     environment:
       MYSQL_ROOT_PASSWORD: passme
-    
+
   web:
-    build: .
+    image: carpool
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp

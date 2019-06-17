@@ -5,5 +5,6 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
+ENV BUNDLER_VERSION 2.0.1
 RUN bundle install
-COPY . /myapp
+RUN bundle update --bundler
