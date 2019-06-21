@@ -13,3 +13,8 @@ Unter localhost:3000 kommt man auf die Hauptseite und unter localhost:8000 auf p
 ## Windows:
 
 Wenn man das Docker Quickstart Terminal verwendet, wird man unter localhost keine Website erreichen, da eine eigen VM gestartet wird. Die IP kann man mit ``docker-machine ip`` bzw. default 192.168.99.100 anzeigen lassen. Dann einfach statt localhost diese IP verwenden, die Ports bleiben gleich.
+
+
+## Database 
+
+Bei der erstamligen Benutzung müssen die Tabellen erstellt werden. Dies kann gemacht werden durch den Befehl ``rake db:migrate``. 
