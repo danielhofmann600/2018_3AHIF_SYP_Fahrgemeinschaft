@@ -4,7 +4,7 @@ default: &default
   database: fahrgemeinschaft
   username: root
   password: passme
-  host: localhost:8000
+  host: 192.168.99.100
   port: 3306
 development:
   <<: *default
